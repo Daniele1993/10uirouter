@@ -1,1 +1,5 @@
 <h1> Questa è la pagina della Home </h1>
+<p ng-repeat="amico in listaAmici"
+    ui-sref="home.dettaglio({id:amico.id})">{{amico.nome}}</p>
+    
+    <div ui-view></div>

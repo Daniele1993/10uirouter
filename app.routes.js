@@ -10,6 +10,13 @@ angular.module('app').config(function(
             titolo:"Questa è la home page"
         }
     })
+
+    .state('home.dettaglio',{
+        url:'/dettaglio:id',
+        templateUrl:'home/dettaglio.template.html',
+        controller:'dettaglioCtrl'
+    })
+    
     .state('contatti',{
         url:'/contatti',
         templateUrl:'contatti/contatti.template.html',
@@ -33,7 +40,7 @@ angular.module('app').config(function(
 
     })
     .state('chisiamo',{
-        abstract:'true',
+        abstract:true,
         url:'/chisiamo',
         templateUrl:'chisiamo/chisiamo.template.html',
         controller:'chisiamoCtrl',
