@@ -4,8 +4,17 @@ angular.module('app').config(function(
 ){
     $stateProvider.state('home',{
         url:'/home',
-        templateUrl:'home.template.html'
+        templateUrl:'home/home.template.html'
+    })
+    .state('contatti',{
+        url:'/contatti',
+        templateUrl:'contatti/contatti.template.html'
+    })
+    .state('chisiamo',{
+        url:'/chisiamo',
+        templateUrl:'chisiamo/chisiamo.template.html'
     });
+
         
         
 });
