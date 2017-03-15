@@ -1,7 +1,11 @@
 angular.module('app').config(function(
-    $stateProvider
+    $stateProvider,$urlRouterProvider
 
 ){
+    //ti rindirizza sulla pagina home 
+    $urlRouterProvider.when("/","/home");
+    $urlRouterProvider.otherwise("/");
+
     $stateProvider.state('home',{
         url:'/home',
         templateUrl:'home/home.template.html',
@@ -12,7 +16,7 @@ angular.module('app').config(function(
     })
 
     .state('home.dettaglio',{
-        url:'/dettaglio:id',
+        url:'/dettaglio/:id/?categoria',
         templateUrl:'home/dettaglio.template.html',
         controller:'dettaglioCtrl'
     })
