@@ -33,10 +33,26 @@ angular.module('app').config(function(
 
     })
     .state('chisiamo',{
+        abstract:'true',
         url:'/chisiamo',
-        templateUrl:'chisiamo/chisiamo.template.html'
-    });
+        templateUrl:'chisiamo/chisiamo.template.html',
+        controller:'chisiamoCtrl',
+        data:{
+            titolo:'ciao'
+        }
 
+    })
+    // stato annidato
+    .state('chisiamo.about',{
+      url:'/about',
+      templateUrl:'chisiamo/chisiamo.about.html', 
+    })
+
+    .state('chisiamo.mission',{
+      
+      url:'/mission',
+      templateUrl:'chisiamo/chisiamo.mission.html', 
+    })
         
         
 });
